@@ -1,7 +1,7 @@
 package mesoddo;
 
 public class Part1 {
-
+//二倍
 	public static void main(String[] args) {
 		System.out.println(pow(2));
 		System.out.println(pow(3));
