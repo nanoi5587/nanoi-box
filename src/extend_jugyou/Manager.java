@@ -1,12 +1,10 @@
 package extend_jugyou;
 
 public class Manager extends Employee {
-/*	public void setName() {
-
+	public Manager(String name) {
+		super(name);
 	}
-	*/
 	public void management() {
-//		super.operation();
 		System.out.println(this.getName()+"は管理者です。");
 	}
 }
