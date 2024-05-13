@@ -9,7 +9,8 @@ public class Main {
 		Scanner scan = new Scanner(System.in);
 		int i = 0;
 		Robot r = new Robot(x,y,i);
-		System.out.println("1～4を押してロボットを動かしてください");
+		SuperRobot sr = new SuperRobot(x,y,i);
+		System.out.println("1～8を押してロボットを動かしてください");
 		System.out.println("終了する場合は9を押してください");
 		System.out.println("現在地を表示する場合は0を押してください");
 		
@@ -23,6 +24,14 @@ public class Main {
 				x = r.robot_East(i);
 			}else if(i == 4) {
 				x = r.robot_West(i);
+			}else if(i == 5) {
+				sr.superRobot_NE(i);
+			}else if(i == 6) {
+				sr.superRobot_NW(i);
+			}else if(i == 7) {
+				sr.superRobot_SE(i);
+			}else if(i == 8) {
+				sr.superRobot_SW(i);
 			}else if(i == 9) {
 				System.out.println("終了します");
 			}else if(i == 0){
