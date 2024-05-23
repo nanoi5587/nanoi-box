@@ -23,9 +23,62 @@ public class SuperRobot extends Robot {
 		super.robot_West();	
 	}
 	
-	public void superRobot_false() {
-		int maxNum = 11;
-		int minNum = -11;
+	public void superRobot_false(int i) {
+		int maxNum = 10;
+		int minNum = -10;
+		//北へ進むのチェック
+		if(i ==1){
+			if(super.getY()>=maxNum){
+				System.out.println("これ以上進めません");
+			}else {
+				super.robot_North();
+			}
+		}//南へ進むチェック
+		else if(i==2){
+			if(super.getY()<=minNum){
+				System.out.println("これ以上進めません");
+			}else {
+				super.robot_South();
+			}
+		}else if(i==3) {
+			if(super.getX()>=maxNum) {
+				System.out.println("これ以上進めません");
+			}else {
+				super.robot_East();
+			}
+		}else if(i==4) {
+			if(super.getX()<=minNum) {
+				System.out.println("これ以上進めません");
+			}else {
+				super.robot_West();
+			}
+		}else if(i==5) {
+			if(super.getX()>=maxNum || super.getY()>=maxNum) {
+				System.out.println("これ以上進めません");
+			}else {
+				superRobot_NE();
+			}
+		}else if(i==6) {
+			if(super.getX()<=minNum || super.getY()>=maxNum) {
+				System.out.println("これ以上進めません");
+			}else {
+				superRobot_NW();
+			}
+		}else if(i==7) {
+			if(super.getX()>=maxNum || super.getY()<=minNum) {
+				System.out.println("これ以上進めません");
+			}else {
+				superRobot_SE();
+			}
+		}else if(i==8) {
+			if(super.getX()<=minNum || super.getY()<=minNum) {
+				System.out.println("これ以上進めません");
+			}else {
+				superRobot_SW();
+			}
+		}
+	}
+}
 	
 /*		numX = Math.max(minNum, super.getX());
 		numX = Math.min(maxNum, super.getX());
@@ -42,7 +95,7 @@ public class SuperRobot extends Robot {
 		numY = super.getY();
 		return numY;
 	}*/
-		if(super.getX() >= maxNum){
+/*		if(super.getX() >= maxNum){
 			if(super.getY() >= maxNum) {
 				System.out.println("これ以上進めません");
 				super.robot_West();
@@ -76,4 +129,5 @@ public class SuperRobot extends Robot {
 			super.robot_North();
 		}
 	}
-}
+}	*/
+

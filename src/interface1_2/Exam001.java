@@ -1,6 +1,6 @@
 package interface1_2;
 
-import interface1.Item;
+import interface1_2.Item;
 
 public class Exam001 {
 	public static void main(String[] args) {
@@ -8,8 +8,8 @@ public class Exam001 {
 		item.setItemName("pencil");
 		item.setItemPrice(100);
 		
-		System.out.println("アイテム名は"+item.getItemName());
-		System.out.println("アイテム価格は"+item.getItemPrice());
+		System.out.println("アイテム名は:"+item.getItemName());
+		System.out.println("アイテム価格は:"+item.getItemPrice());
 		
 		item.printStatus();
 	}

@@ -3,7 +3,7 @@ package interface1;
 public class Exam001 {
 
 	public static void main(String[] args) {
-		Item item = new Item("pencil",100);
+		Item item = new Item();
 		item.setItemName("pencil");
 		item.setItemPrice(100);
 		
